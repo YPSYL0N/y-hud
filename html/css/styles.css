@@ -1,0 +1,66 @@
+/** Full-screen container */
+html, body {
+    font-size: 12pt;
+}
+main {
+    width: 100%;
+    height: 99.25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/** Progress bar containers */
+.box {
+    display: block;
+    position: relative;
+}
+
+.box, .box > progress {
+    width: 200px;
+    z-index: 1;
+}
+
+.box:first-child {
+    margin-right: 19px;
+}
+
+/** Progress bar styles */
+#barArmour, #barHealth {
+    height: .4em;
+    display: flex;
+}
+
+#barArmour, #barHealth {
+    height: 0.80em;
+    appearance: none;
+}
+
+#barArmour::-webkit-progress-bar, #barHealth::-webkit-progress-bar {
+    border-radius: 25px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.10em;
+}
+
+#barArmour::-webkit-progress-value {
+    border-radius: 25px;
+    background-color: rgb(8, 161, 231);
+}
+
+#barHealth::-webkit-progress-value {
+    border-radius: 25px;
+    background-color: rgb(250, 0, 0);
+
+}
+
+/** Position icons */
+.fa-shield-alt, .fa-heart {
+    color: white;
+    font-size: 1.4vh;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: -8%;
+}
+
