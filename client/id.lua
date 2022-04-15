@@ -1,16 +1,13 @@
 Citizen.CreateThread(function()
     Wait(50)
     while true do
-        miid(0.715, 1.435, 1.0,1.0,0.40, "~w~TVOJE ID: ~b~[".. GetPlayerServerId(NetworkGetEntityOwner(GetPlayerPed(-1))) .. ']', 255, 255, 255, 255)
+        miid(0.715, 1.435, 1.0,1.0,0.40, "~w~YOUR ID: ~b~[".. GetPlayerServerId(NetworkGetEntityOwner(GetPlayerPed(-1))) .. ']', 255, 255, 255, 255)
         Citizen.Wait(1)
     end
 end)
 
 function miid(x,y ,width,height,scale, text, r,g,b,a, outline)
-    RegisterFontFile('firesans') -- název soubory gfx bez koncovky gfx
-    fontId = RegisterFontId('Fire Sans') -- nazev ktery jsme dávali do in.xml
-    local font = fontId
-    SetTextFont(font)
+    SetTextFont(4)
     SetTextProportional(0)
     SetTextScale(scale, scale)
 	SetTextColour( 0,0,0, 255 )
