@@ -1,3 +1,3 @@
-# y-hud
+# ym-hud
 Simple HUD
 
